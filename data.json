@@ -1,0 +1,22 @@
+{
+  "audio": [
+    {
+      "artist": "MiyaGi & Эндшпиль",
+      "song": "RAPAPAM",
+      "audioFile": "audio/MiyaGi_RAPAPAM.mp3",
+      "audioCover": "img/img0.jpg"
+    },
+    {
+      "artist": "MiyaGi & Andy Panda",
+      "song": "Там Ревели Горы",
+      "audioFile": "audio/MiyaGi & Andy Panda - Там Ревели Горы.mp3",
+      "audioCover": "img/img1.png"
+    },
+    {
+      "artist": "Виктор Цой",
+      "song": "Группа крови",
+      "audioFile": "audio/Виктор Цой - Группа крови.mp3",
+      "audioCover": "img/img3.png"
+    }
+  ]
+}

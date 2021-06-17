@@ -1,0 +1,223 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 15px;
+    text-align: center;
+    background-color: #c7c4c4;
+
+}
+
+.music-player{
+    position: relative;
+    display: block;
+    justify-content: center;
+    max-width: 354px;
+    width: 100%;
+    background: linear-gradient(to right, sienna,#c1a910);
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.25), -3px -8px 8px rgba(255, 255, 255, 0.1);
+}
+
+.music_player__cover{
+    min-height: 354px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.25), -3px -8px 8px rgba(255, 255, 255, 0.1)
+}
+
+.img_pause{
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+
+}
+
+
+.img_playing{
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    animation: rotate 8s linear infinite;
+    overflow: hidden;
+}
+
+@keyframes rotate {
+    from {
+        transform:rotate(-360deg);
+    }
+}
+
+.music_player__info{
+    min-height: 320px;
+
+    padding: 20px 10px;
+}
+
+.audio-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    font-family: "Tw Cen MT";
+    font-weight: 800;
+    font-style: italic;
+    overflow: hidden;
+    min-height: 115px;
+    max-height: 115px;
+}
+
+.audio-info__atrist{
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: rgba(76, 12, 12, 0.85);
+    max-width: 70%;
+    max-height: 25px;
+    overflow: hidden;
+}
+
+.audio-info__songtitle{
+    font-size: 35px;
+    margin-bottom: 15px;
+    color: rgba(45, 2, 2, 0.85);
+    max-width: 90%;
+    max-height: 35px;
+    overflow: hidden;
+}
+
+.audio-controll{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-width: 200px;
+    margin: 0 20px;
+
+}
+
+.audio-controll button{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: none;
+    border: 2px solid #d9abab;
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.25), -3px -8px 8px rgba(255, 255, 255, 0.1);
+
+}
+
+.audio-controll button:hover{
+    border: 3px solid #f8a410;
+    text-shadow: 1px 1px 10px #c6d40c, 0 0 5em #f3ea13;
+
+}
+
+
+#btn_play{
+    width: 70px;
+    height: 70px;
+}
+
+i{
+    size: 18px;
+}
+
+.audio-progress{
+    margin: 40px auto;
+    min-height: 5px;
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.audio-progress__track{
+    margin-right: 5px;
+    width: 100%;
+    background: darkred;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.audio-progress__track span{
+    height: 5px;
+    background: #d0b20f;
+    border-radius: 3px;
+}
+
+.audio-progress__duration{
+    color: #fcf6f6;
+}
+
+
+.button_mute, .button_playlist{
+    position: absolute;
+    margin: 15px;
+    cursor: pointer;
+}
+.button_mute i{
+    color: rgba(226, 223, 223, 0.97);
+    font-size: 20px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25), -1px -2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.button_playlist{
+    position: absolute;
+    right: 0px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.button_playlist i{
+    color: rgba(226, 223, 223, 0.97);
+    font-size: 30px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25), -1px -2px 4px rgba(255, 255, 255, 0.1);
+}
+
+
+
+.list_closed{
+    display: none;
+}
+
+.list-opened{
+    display: flex;
+}
+
+#list_id{
+    position: absolute;
+    left: 20px;
+    top:60px;
+    right: 20px;
+    flex-direction: inherit;
+    width: auto;
+    height: auto;
+    min-height: 40px;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: #c7c4c4;
+    border-radius: 10px;
+    font-size: 20px;
+    border: 3px solid #ead975;
+    z-index: 1000;
+}
+
+.songs{
+    margin-bottom : 10px;
+    margin-top : 5px;
+    background : #2d9ad5;
+    cursor : pointer;
+    max-height : 20px;
+    overflow: hidden;
+}
+
+
+.playing{
+    background-color: red;
+}
